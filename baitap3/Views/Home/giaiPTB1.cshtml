@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "giaiPTB1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Giải phương trình bậc 1:</h2>
+@using (Html.BeginForm())
+{
+    <h1>Nhập Hệ Số A:</h1>
+    <input type="text" name="HesoA" />
+    <h1>Nhập hệ số B:</h1>
+    <input type="text" name="HesoB" />
+    <input type="submit" name="Giải phương trình" />
+}
+<h3>Nghiệm của phương trình là x =: @ViewBag.nghiemPT</h3>
+public class giaiPhuongTrinh
+    {
+        public double GiaiPhuongTrinhBacNhat(double a, double b)
+        {
+            double x;
+            x = -b / a;
+            return x;
+        }
+    }
